@@ -1,0 +1,155 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-23T15:53:37.000Z",
+  "title": "Design System: shadcn-components",
+  "extensions": {
+    "colorMeta": {
+      "mist-surface": { "role": "neutral", "displayName": "晨雾面", "canonical": "oklch(96.555% 0.008 253.9)", "tonalRamp": ["oklch(0.15 0.005 253.9)", "oklch(0.264 0.007 253.9)", "oklch(0.379 0.008 253.9)", "oklch(0.493 0.008 253.9)", "oklch(0.607 0.008 253.9)", "oklch(0.721 0.007 253.9)", "oklch(0.836 0.005 253.9)", "oklch(0.95 0.004 253.9)"] },
+      "ink": { "role": "neutral", "displayName": "墨黑", "canonical": "oklch(23.929% 0 0)", "tonalRamp": ["oklch(0.15 0 0)", "oklch(0.264 0 0)", "oklch(0.379 0 0)", "oklch(0.493 0 0)", "oklch(0.607 0 0)", "oklch(0.721 0 0)", "oklch(0.836 0 0)", "oklch(0.95 0 0)"] },
+      "azure-surface": { "role": "secondary", "displayName": "天青面", "canonical": "oklch(91.193% 0.04 260.1)", "tonalRamp": ["oklch(0.15 0.025 260.1)", "oklch(0.264 0.033 260.1)", "oklch(0.379 0.04 260.1)", "oklch(0.493 0.04 260.1)", "oklch(0.607 0.04 260.1)", "oklch(0.721 0.034 260.1)", "oklch(0.836 0.026 260.1)", "oklch(0.95 0.018 260.1)"] },
+      "deep-sea-blue": { "role": "primary", "displayName": "深海蓝", "canonical": "oklch(49.488% 0.199 260.6)", "tonalRamp": ["oklch(0.15 0.125 260.6)", "oklch(0.264 0.167 260.6)", "oklch(0.379 0.199 260.6)", "oklch(0.493 0.199 260.6)", "oklch(0.607 0.199 260.6)", "oklch(0.721 0.173 260.6)", "oklch(0.836 0.13 260.6)", "oklch(0.95 0.088 260.6)"] },
+      "focus-ring": { "role": "primary", "displayName": "信号蓝（焦点环）", "canonical": "oklch(57.37% 0.195 257.9)", "tonalRamp": ["oklch(0.15 0.122 257.9)", "oklch(0.264 0.164 257.9)", "oklch(0.379 0.195 257.9)", "oklch(0.493 0.195 257.9)", "oklch(0.607 0.195 257.9)", "oklch(0.721 0.169 257.9)", "oklch(0.836 0.127 257.9)", "oklch(0.95 0.086 257.9)"] },
+      "aurora-blue": { "role": "tertiary", "displayName": "极光蓝", "canonical": "oklch(63.461% 0.197 258.2)", "tonalRamp": ["oklch(0.15 0.124 258.2)", "oklch(0.264 0.166 258.2)", "oklch(0.379 0.197 258.2)", "oklch(0.493 0.197 258.2)", "oklch(0.607 0.197 258.2)", "oklch(0.721 0.171 258.2)", "oklch(0.836 0.129 258.2)", "oklch(0.95 0.087 258.2)"] },
+      "aurora-violet": { "role": "tertiary", "displayName": "极光紫", "canonical": "oklch(66.234% 0.193 289.3)", "tonalRamp": ["oklch(0.15 0.121 289.3)", "oklch(0.264 0.162 289.3)", "oklch(0.379 0.193 289.3)", "oklch(0.493 0.193 289.3)", "oklch(0.607 0.193 289.3)", "oklch(0.721 0.167 289.3)", "oklch(0.836 0.126 289.3)", "oklch(0.95 0.085 289.3)"] },
+      "aurora-magenta": { "role": "tertiary", "displayName": "极光洋红", "canonical": "oklch(73.544% 0.21 338.2)", "tonalRamp": ["oklch(0.15 0.132 338.2)", "oklch(0.264 0.176 338.2)", "oklch(0.379 0.21 338.2)", "oklch(0.493 0.21 338.2)", "oklch(0.607 0.21 338.2)", "oklch(0.721 0.182 338.2)", "oklch(0.836 0.137 338.2)", "oklch(0.95 0.093 338.2)"] },
+      "aurora-red": { "role": "tertiary", "displayName": "极光红", "canonical": "oklch(65.515% 0.223 26.9)", "tonalRamp": ["oklch(0.15 0.14 26.9)", "oklch(0.264 0.188 26.9)", "oklch(0.379 0.223 26.9)", "oklch(0.493 0.223 26.9)", "oklch(0.607 0.223 26.9)", "oklch(0.721 0.194 26.9)", "oklch(0.836 0.146 26.9)", "oklch(0.95 0.099 26.9)"] },
+      "aurora-orange": { "role": "tertiary", "displayName": "极光橙", "canonical": "oklch(70.378% 0.195 41.1)", "tonalRamp": ["oklch(0.15 0.122 41.1)", "oklch(0.264 0.164 41.1)", "oklch(0.379 0.195 41.1)", "oklch(0.493 0.195 41.1)", "oklch(0.607 0.195 41.1)", "oklch(0.721 0.169 41.1)", "oklch(0.836 0.128 41.1)", "oklch(0.95 0.086 41.1)"] },
+      "aurora-amber": { "role": "tertiary", "displayName": "极光琥珀", "canonical": "oklch(85.453% 0.175 88.4)", "tonalRamp": ["oklch(0.15 0.11 88.4)", "oklch(0.264 0.147 88.4)", "oklch(0.379 0.175 88.4)", "oklch(0.493 0.175 88.4)", "oklch(0.607 0.175 88.4)", "oklch(0.721 0.151 88.4)", "oklch(0.836 0.114 88.4)", "oklch(0.95 0.077 88.4)"] },
+      "aurora-yellow": { "role": "tertiary", "displayName": "极光黄", "canonical": "oklch(89.489% 0.183 96.9)", "tonalRamp": ["oklch(0.15 0.115 96.9)", "oklch(0.264 0.154 96.9)", "oklch(0.379 0.183 96.9)", "oklch(0.493 0.183 96.9)", "oklch(0.607 0.183 96.9)", "oklch(0.721 0.158 96.9)", "oklch(0.836 0.12 96.9)", "oklch(0.95 0.081 96.9)"] },
+      "aurora-lime": { "role": "tertiary", "displayName": "极光青柠", "canonical": "oklch(81.628% 0.204 134.1)", "tonalRamp": ["oklch(0.15 0.128 134.1)", "oklch(0.264 0.172 134.1)", "oklch(0.379 0.204 134.1)", "oklch(0.493 0.204 134.1)", "oklch(0.607 0.204 134.1)", "oklch(0.721 0.177 134.1)", "oklch(0.836 0.134 134.1)", "oklch(0.95 0.09 134.1)"] },
+      "aurora-green": { "role": "tertiary", "displayName": "极光绿", "canonical": "oklch(69.704% 0.183 151.4)", "tonalRamp": ["oklch(0.15 0.115 151.4)", "oklch(0.264 0.154 151.4)", "oklch(0.379 0.183 151.4)", "oklch(0.493 0.183 151.4)", "oklch(0.607 0.183 151.4)", "oklch(0.721 0.159 151.4)", "oklch(0.836 0.12 151.4)", "oklch(0.95 0.081 151.4)"] },
+      "aurora-teal": { "role": "tertiary", "displayName": "极光蓝绿", "canonical": "oklch(67.643% 0.104 201.5)", "tonalRamp": ["oklch(0.15 0.066 201.5)", "oklch(0.264 0.088 201.5)", "oklch(0.379 0.104 201.5)", "oklch(0.493 0.104 201.5)", "oklch(0.607 0.104 201.5)", "oklch(0.721 0.09 201.5)", "oklch(0.836 0.068 201.5)", "oklch(0.95 0.046 201.5)"] },
+      "aurora-cyan": { "role": "tertiary", "displayName": "极光青", "canonical": "oklch(67.219% 0.116 208.2)", "tonalRamp": ["oklch(0.15 0.073 208.2)", "oklch(0.264 0.097 208.2)", "oklch(0.379 0.116 208.2)", "oklch(0.493 0.116 208.2)", "oklch(0.607 0.116 208.2)", "oklch(0.721 0.1 208.2)", "oklch(0.836 0.076 208.2)", "oklch(0.95 0.051 208.2)"] },
+      "scaffold-page": { "role": "neutral", "displayName": "纸白（脚手架）", "canonical": "oklch(100% 0 0)", "tonalRamp": ["oklch(0.15 0 0)", "oklch(0.264 0 0)", "oklch(0.379 0 0)", "oklch(0.493 0 0)", "oklch(0.607 0 0)", "oklch(0.721 0 0)", "oklch(0.836 0 0)", "oklch(0.95 0 0)"] },
+      "scaffold-title": { "role": "neutral", "displayName": "标题墨（脚手架）", "canonical": "oklch(20.5% 0 none)", "tonalRamp": ["oklch(0.15 0 0)", "oklch(0.264 0 0)", "oklch(0.379 0 0)", "oklch(0.493 0 0)", "oklch(0.607 0 0)", "oklch(0.721 0 0)", "oklch(0.836 0 0)", "oklch(0.95 0 0)"] },
+      "scaffold-body": { "role": "neutral", "displayName": "正文灰（脚手架）", "canonical": "oklch(37.1% 0 none)", "tonalRamp": ["oklch(0.15 0 0)", "oklch(0.264 0 0)", "oklch(0.379 0 0)", "oklch(0.493 0 0)", "oklch(0.607 0 0)", "oklch(0.721 0 0)", "oklch(0.836 0 0)", "oklch(0.95 0 0)"] },
+      "scaffold-muted": { "role": "neutral", "displayName": "标签灰（脚手架）", "canonical": "oklch(70.8% 0 none)", "tonalRamp": ["oklch(0.15 0 0)", "oklch(0.264 0 0)", "oklch(0.379 0 0)", "oklch(0.493 0 0)", "oklch(0.607 0 0)", "oklch(0.721 0 0)", "oklch(0.836 0 0)", "oklch(0.95 0 0)"] },
+      "brand-violet": { "role": "tertiary", "displayName": "品牌紫罗兰（仅 favicon）", "canonical": "oklch(56.814% 0.264 293.4)", "tonalRamp": ["oklch(0.15 0.166 293.4)", "oklch(0.264 0.222 293.4)", "oklch(0.379 0.264 293.4)", "oklch(0.493 0.264 293.4)", "oklch(0.607 0.264 293.4)", "oklch(0.721 0.229 293.4)", "oklch(0.836 0.173 293.4)", "oklch(0.95 0.117 293.4)"] },
+      "brand-violet-deep": { "role": "tertiary", "displayName": "品牌深紫（仅 favicon）", "canonical": "oklch(53.362% 0.288 292.9)", "tonalRamp": ["oklch(0.15 0.181 292.9)", "oklch(0.264 0.242 292.9)", "oklch(0.379 0.288 292.9)", "oklch(0.493 0.288 292.9)", "oklch(0.607 0.288 292.9)", "oklch(0.721 0.25 292.9)", "oklch(0.836 0.189 292.9)", "oklch(0.95 0.128 292.9)"] },
+      "brand-lavender": { "role": "tertiary", "displayName": "品牌薰衣草白（仅 favicon）", "canonical": "oklch(93.788% 0.034 298.5)", "tonalRamp": ["oklch(0.15 0.022 298.5)", "oklch(0.264 0.029 298.5)", "oklch(0.379 0.034 298.5)", "oklch(0.493 0.034 298.5)", "oklch(0.607 0.034 298.5)", "oklch(0.721 0.03 298.5)", "oklch(0.836 0.022 298.5)", "oklch(0.95 0.015 298.5)"] },
+      "brand-sky": { "role": "tertiary", "displayName": "品牌天空青（仅 favicon）", "canonical": "oklch(76.491% 0.139 236.3)", "tonalRamp": ["oklch(0.15 0.088 236.3)", "oklch(0.264 0.117 236.3)", "oklch(0.379 0.139 236.3)", "oklch(0.493 0.139 236.3)", "oklch(0.607 0.139 236.3)", "oklch(0.721 0.121 236.3)", "oklch(0.836 0.091 236.3)", "oklch(0.95 0.062 236.3)"] }
+    },
+    "typographyMeta": {
+      "title": { "displayName": "标题", "purpose": "展示页唯一标题；当前实现中最大的文字（18px）。" },
+      "specimen-label": { "displayName": "标本标签", "purpose": "每组标本上方的属性名（variant / size / radius）。永远 12px、标签灰、无彩。属脚手架层。" },
+      "footnote": { "displayName": "页脚说明", "purpose": "页面底部的说明文字，最大宽度 28rem，居中。属脚手架层。" },
+      "button-label": { "displayName": "按钮文字", "purpose": "按钮内文字。14px + line-height:1 + weight 400 是硬性组合（The 14px/1 Rule）。" }
+    },
+    "shadows": [],
+    "motion": [
+      { "name": "enter", "value": "1000ms", "purpose": "入场动画时长（按钮语境 animate(true, 1000)）。" },
+      { "name": "animate-default", "value": "650ms", "purpose": "Aurora.animate() 的默认时长，非按钮语境使用。" },
+      { "name": "fade", "value": "350ms", "purpose": "startFollow / stopFollow 的显隐淡入淡出（FADE_DURATION_MS）。" },
+      { "name": "transition-height", "value": "150ms", "purpose": ".aurora-glow 的 height 过渡。" },
+      { "name": "transition-filter", "value": "150ms", "purpose": ".aurora-surface 的 filter 过渡（hover 虚化底色）。" },
+      { "name": "ease-enter", "value": "cubic-bezier(0, 0, 0, 1)", "purpose": "透明度与角度动画的进入缓动。" },
+      { "name": "ease-exit", "value": "cubic-bezier(0.30, 0.00, 0.80, 0.15)", "purpose": "透明度动画在 offset 0.5 处的退出缓动。" },
+      { "name": "angle-sweep-gradient", "value": "170deg → 225deg", "purpose": "入场时 --aurora-gradient-angle 的扫掠区间。" },
+      { "name": "angle-sweep-mask", "value": "-90deg → 200deg", "purpose": "入场时 --aurora-mask-angle 的扫掠区间。" },
+      { "name": "spring-accel", "value": "0.05", "purpose": "rAF 每帧角速度增量系数。" },
+      { "name": "gain-saturate", "value": "90deg", "purpose": "低通增益饱和角差：min(|Δ|/90, 1)。" },
+      { "name": "gain-exponent", "value": "3", "purpose": "低通增益曲线的三次方。" },
+      { "name": "mask-offset", "value": "-167deg", "purpose": "写入 --aurora-mask-angle 时的偏移常量。" },
+      { "name": "gradient-offset", "value": "-142deg", "purpose": "写入 --aurora-gradient-angle 时的偏移常量。" },
+      { "name": "follow-scale", "value": "4 / 1.5", "purpose": "startFollow 传入的 scaleX / scaleY，与 computeTargetAngle 的圆盘空间缩放同源。" },
+      { "name": "glow-opacity", "value": "0.6", "purpose": "光晕外层的总强度闸（Tailwind opacity-60）。" },
+      { "name": "hover-surface-blur", "value": "blur(2px)", "purpose": "hover 时底色层的虚化量；variant=plain 或 noBlur 时取消。" },
+      { "name": "css-fallback-vs-runtime", "value": "blur 5px→4px, inset 0→-1px, scale-x 7→4, radius 24px→100px", "purpose": "CSS 回退值与运行时 SIZE_VALUES 并存；引擎初始化前渲染的是回退值（更模糊、更宽）。" },
+      { "name": "reduced-motion", "value": "prefers-reduced-motion: reduce", "purpose": "引擎侧 animate() 直接 return；CSS 侧 transition:none 且取消 hover 虚化。两侧都必须保留。" }
+    ],
+    "breakpoints": []
+  },
+  "components": [
+    {
+      "name": "Aurora Button — Default",
+      "kind": "button",
+      "refersTo": "button-aurora-default",
+      "description": "默认变体：晨雾面 + 墨黑字，药丸形。真实组件的光晕角度由 rAF 逐帧写入 CSS 变量并朝向鼠标；此处为静态近似（hover 时整圈光谱淡入并旋转）。",
+      "html": "<button class='ds-ad' type='button'><span class='ds-ad-surface'></span><span class='ds-ad-label'>Default</span></button>",
+      "css": ".ds-ad{position:relative;display:inline-flex;align-items:center;justify-content:center;height:36px;padding:0 8px;border:0;background:transparent;border-radius:100px;font-family:var(--font-sans,ui-sans-serif,system-ui,sans-serif);font-size:14px;line-height:1;font-weight:400;cursor:pointer}.ds-ad::before{content:'';position:absolute;inset:-1px;border-radius:inherit;background:conic-gradient(#3186ff 34%,#9378ff 37%,#f96bd6 39%,#fc413d 41%,#fc413d 48%,#ff6b2b 50%,#fec700 52%,#ffdb0f 56%,#88de42 58%,#0ebc5f 61%,#0ebc5f 65%,#2eaab2 70%,#00a9bb 72%,#3186ff 73%,#3186ff 83%,#3186ff 100%);filter:blur(4px);opacity:0;rotate:0deg;transition:opacity .35s ease,rotate .6s cubic-bezier(0,0,0,1);z-index:0;pointer-events:none}.ds-ad:hover::before,.ds-ad:focus-visible::before{opacity:.6;rotate:225deg}.ds-ad-surface{position:absolute;inset:1px;border-radius:100px;background:#f0f4f9;transition:filter .15s;z-index:1}.ds-ad:hover .ds-ad-surface{filter:blur(2px)}.ds-ad:focus-visible{outline:none}.ds-ad:focus-visible .ds-ad-surface{outline:2px solid #1a73e8;outline-offset:2px}.ds-ad-label{position:relative;z-index:2;display:inline-flex;align-items:center;justify-content:center;gap:6px;color:#1f1f1f}"
+    },
+    {
+      "name": "Aurora Button — Highlighted",
+      "kind": "button",
+      "refersTo": "button-aurora-highlighted",
+      "description": "强调变体：天青面 + 深海蓝字，是体系内唯一的静态彩色组合（The One Light Rule 的例外之一）。",
+      "html": "<button class='ds-ah' type='button'><span class='ds-ah-surface'></span><span class='ds-ah-label'>Highlighted</span></button>",
+      "css": ".ds-ah{position:relative;display:inline-flex;align-items:center;justify-content:center;height:36px;padding:0 8px;border:0;background:transparent;border-radius:100px;font-family:var(--font-sans,ui-sans-serif,system-ui,sans-serif);font-size:14px;line-height:1;font-weight:400;cursor:pointer}.ds-ah::before{content:'';position:absolute;inset:-1px;border-radius:inherit;background:conic-gradient(#3186ff 34%,#9378ff 37%,#f96bd6 39%,#fc413d 41%,#fc413d 48%,#ff6b2b 50%,#fec700 52%,#ffdb0f 56%,#88de42 58%,#0ebc5f 61%,#0ebc5f 65%,#2eaab2 70%,#00a9bb 72%,#3186ff 73%,#3186ff 83%,#3186ff 100%);filter:blur(4px);opacity:0;rotate:0deg;transition:opacity .35s ease,rotate .6s cubic-bezier(0,0,0,1);z-index:0;pointer-events:none}.ds-ah:hover::before,.ds-ah:focus-visible::before{opacity:.6;rotate:225deg}.ds-ah-surface{position:absolute;inset:1px;border-radius:100px;background:#d3e3fd;transition:filter .15s;z-index:1}.ds-ah:hover .ds-ah-surface{filter:blur(2px)}.ds-ah:focus-visible{outline:none}.ds-ah:focus-visible .ds-ah-surface{outline:2px solid #1a73e8;outline-offset:2px}.ds-ah-label{position:relative;z-index:2;display:inline-flex;align-items:center;justify-content:center;gap:6px;color:#0b57d0}"
+    },
+    {
+      "name": "Aurora Button — Ghost",
+      "kind": "button",
+      "refersTo": "button-aurora-ghost",
+      "description": "透明底变体：底色 transparent、文字 inherit，只剩光晕。放在有内容的背景上时光最明显。",
+      "html": "<button class='ds-ag' type='button'><span class='ds-ag-surface'></span><span class='ds-ag-label'>Ghost</span></button>",
+      "css": ".ds-ag{position:relative;display:inline-flex;align-items:center;justify-content:center;height:36px;padding:0 8px;border:0;background:transparent;border-radius:100px;color:#1f1f1f;font-family:var(--font-sans,ui-sans-serif,system-ui,sans-serif);font-size:14px;line-height:1;font-weight:400;cursor:pointer}.ds-ag::before{content:'';position:absolute;inset:-1px;border-radius:inherit;background:conic-gradient(#3186ff 34%,#9378ff 37%,#f96bd6 39%,#fc413d 41%,#fc413d 48%,#ff6b2b 50%,#fec700 52%,#ffdb0f 56%,#88de42 58%,#0ebc5f 61%,#0ebc5f 65%,#2eaab2 70%,#00a9bb 72%,#3186ff 73%,#3186ff 83%,#3186ff 100%);filter:blur(4px);opacity:0;rotate:0deg;transition:opacity .35s ease,rotate .6s cubic-bezier(0,0,0,1);z-index:0;pointer-events:none}.ds-ag:hover::before,.ds-ag:focus-visible::before{opacity:.6;rotate:225deg}.ds-ag-surface{position:absolute;inset:1px;border-radius:100px;background:transparent;transition:filter .15s;z-index:1}.ds-ag:focus-visible{outline:none}.ds-ag:focus-visible .ds-ag-surface{outline:2px solid #1a73e8;outline-offset:2px}.ds-ag-label{position:relative;z-index:2;display:inline-flex;align-items:center;justify-content:center;gap:6px;color:inherit}"
+    },
+    {
+      "name": "Aurora Button — Icon",
+      "kind": "button",
+      "refersTo": "button-aurora-icon",
+      "description": "图标变体：36×36px 正方形、水平内边距 0。图标 20×20，currentColor 上色，必须带 aria-label。",
+      "html": "<button class='ds-ai' type='button' aria-label='AI 模式'><span class='ds-ai-surface'></span><span class='ds-ai-label'><svg width='20' height='20' viewBox='0 0 24 24' fill='currentColor' aria-hidden='true'><path d='M17.5 12c0-3.04 2.46-5.5 5.5-5.5-3.04 0-5.5-2.46-5.5-5.5 0 3.04-2.46 5.5-5.5 5.5 3.04 0 5.5 2.46 5.5 5.5z'/></svg></span></button>",
+      "css": ".ds-ai{position:relative;display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;padding:0;border:0;background:transparent;border-radius:100px;font-family:var(--font-sans,ui-sans-serif,system-ui,sans-serif);cursor:pointer}.ds-ai::before{content:'';position:absolute;inset:-1px;border-radius:inherit;background:conic-gradient(#3186ff 34%,#9378ff 37%,#f96bd6 39%,#fc413d 41%,#fc413d 48%,#ff6b2b 50%,#fec700 52%,#ffdb0f 56%,#88de42 58%,#0ebc5f 61%,#0ebc5f 65%,#2eaab2 70%,#00a9bb 72%,#3186ff 73%,#3186ff 83%,#3186ff 100%);filter:blur(4px);opacity:0;rotate:0deg;transition:opacity .35s ease,rotate .6s cubic-bezier(0,0,0,1);z-index:0;pointer-events:none}.ds-ai:hover::before,.ds-ai:focus-visible::before{opacity:.6;rotate:225deg}.ds-ai-surface{position:absolute;inset:1px;border-radius:100px;background:#f0f4f9;transition:filter .15s;z-index:1}.ds-ai:hover .ds-ai-surface{filter:blur(2px)}.ds-ai:focus-visible{outline:none}.ds-ai:focus-visible .ds-ai-surface{outline:2px solid #1a73e8;outline-offset:2px}.ds-ai-label{position:relative;z-index:2;display:inline-flex;align-items:center;justify-content:center;color:#1f1f1f}"
+    },
+    {
+      "name": "Aurora Button — Large Rounded",
+      "kind": "button",
+      "refersTo": "button-aurora-lg",
+      "description": "组合示例：size=lg（48px / 内边距 16px）+ radius=rounded（8px）+ variant=highlighted，图标与文字间距 6px。圆角改变时光晕裁剪自动跟随（The Inherited Corner Rule）。",
+      "html": "<button class='ds-al' type='button'><span class='ds-al-surface'></span><span class='ds-al-label'><svg width='20' height='20' viewBox='0 0 24 24' fill='currentColor' aria-hidden='true'><path d='M17.5 12c0-3.04 2.46-5.5 5.5-5.5-3.04 0-5.5-2.46-5.5-5.5 0 3.04-2.46 5.5-5.5 5.5 3.04 0 5.5 2.46 5.5 5.5z'/></svg>AI 模式</span></button>",
+      "css": ".ds-al{position:relative;display:inline-flex;align-items:center;justify-content:center;height:48px;padding:0 16px;border:0;background:transparent;border-radius:8px;font-family:var(--font-sans,ui-sans-serif,system-ui,sans-serif);font-size:14px;line-height:1;font-weight:400;cursor:pointer}.ds-al::before{content:'';position:absolute;inset:-1px;border-radius:inherit;background:conic-gradient(#3186ff 34%,#9378ff 37%,#f96bd6 39%,#fc413d 41%,#fc413d 48%,#ff6b2b 50%,#fec700 52%,#ffdb0f 56%,#88de42 58%,#0ebc5f 61%,#0ebc5f 65%,#2eaab2 70%,#00a9bb 72%,#3186ff 73%,#3186ff 83%,#3186ff 100%);filter:blur(4px);opacity:0;rotate:0deg;transition:opacity .35s ease,rotate .6s cubic-bezier(0,0,0,1);z-index:0;pointer-events:none}.ds-al:hover::before,.ds-al:focus-visible::before{opacity:.6;rotate:225deg}.ds-al-surface{position:absolute;inset:1px;border-radius:8px;background:#d3e3fd;transition:filter .15s;z-index:1}.ds-al:hover .ds-al-surface{filter:blur(2px)}.ds-al:focus-visible{outline:none}.ds-al:focus-visible .ds-al-surface{outline:2px solid #1a73e8;outline-offset:2px}.ds-al-label{position:relative;z-index:2;display:inline-flex;align-items:center;justify-content:center;gap:6px;color:#0b57d0}"
+    },
+    {
+      "name": "Specimen Label",
+      "kind": "custom",
+      "refersTo": "",
+      "description": "标本标签（脚手架层，非规范）：12px / 16px 行高 / 标签灰，写在每组标本上方。落地页可以推翻它，但「让位于标本」这条意图应保留。",
+      "html": "<p class='ds-sl'>variant</p>",
+      "css": ".ds-sl{margin:0;font-family:var(--font-sans,ui-sans-serif,system-ui,sans-serif);font-size:12px;line-height:16px;font-weight:400;color:#a3a3a3;letter-spacing:0}"
+    }
+  ],
+  "narrative": {
+    "northStar": "极光标本册 / The Aurora Specimen Sheet",
+    "overview": "这是一册摊开的标本纸。页面是纯白的，没有装饰、没有分区线、没有卡片、没有阴影；每一枚组件被单独居中陈列，上方一行 12px 的中性灰标签写着它的属性名（variant / size / radius）。标签的职责是让位——它必须小到不与标本争夺注意力。整册纸面上唯一有彩度的东西，是极光光谱本身。\n\n气质是克制的魔法。容器一侧是仪器级的冷静：系统字体、中性灰、零装饰、精确到 1px 的内缩；光的一侧是完全相反的放纵：15 段色标的圆锥渐变被两层模糊揉开，再用双圆锥遮罩切出一段朝向鼠标的弧，逐帧由 rAF 写入 CSS 变量。两者并置正是这个体系的识别点——如果容器也变得花哨，光就不再是主角。\n\n深度不用投影表达（全项目 box-shadow 出现 0 次），而是靠三件事：模糊的光盘、底色层 1px 的内缩（让光在边缘露出一圈常驻光边）、以及 hover 时底色层自身被 blur(2px) 推到光后面。\n\n需要明确区分两层规范地位（2026-09-23 与用户确认）：组件体系是规范——--aurora-* 变量、色彩、圆角、字号、运动时序都以 registry/ 内的实现为准；展示页外壳是临时脚手架——白底、居中的单列堆叠、12px 灰标签只是当前调试用的壳，已确认展示站要成为公开落地页，因此外壳可以被推翻，不要把它当作页面语言照抄。",
+    "keyCharacteristics": [
+      "白纸陈列：标本居中，标签最小化，界面本身不承担表现欲",
+      "零 box-shadow：深度只来自模糊、光晕与 1px 光边",
+      "彩度专属极光光谱：界面其余部分保持无彩中性，静态强调蓝是唯一例外",
+      "零 webfont：全部文字落在系统栈，分发组件不给宿主增加网络成本",
+      "圆角是唯一形状变量，且光晕逐层继承它",
+      "运动是逐帧的：ref + setProperty + requestAnimationFrame，不经过 React 渲染",
+      "组件规范 vs 页面脚手架两层地位分明，后者可被推翻"
+    ],
+    "rules": [
+      { "name": "The One Light Rule（唯一光源规则）", "body": "一屏之内，有彩度的像素只允许来自极光光谱。界面本身保持无彩中性；#0b57d0 与 #1a73e8 是仅有的两个静态例外，且各自被锁死在 highlighted 文字与 focus ring 上，不得挪作装饰用。", "section": "colors" },
+      { "name": "The Untouched Violet（未启用的紫）", "body": "favicon 的紫色系尚未与界面调和。在用户明确决定之前，不要把它当主色使用，也不要顺手把它铺到页面上——那会同时破坏 One Light Rule 与现有的浅蓝体系。", "section": "colors" },
+      { "name": "The 14px/1 Rule", "body": "按钮文字永远是 14px + line-height: 1 + font-weight: 400。按钮高度由 --aurora-button-height 单独决定（24 / 36 / 48px），一旦行高参与撑高，三档高度的垂直居中就会同时失真。", "section": "typography" },
+      { "name": "The No Webfont Rule", "body": "分发的组件不得引入 webfont。展示站若将来要用自定义字体，那是页面外壳的决定（脚手架层），不能渗进 registry/ 里的组件单元。", "section": "typography" },
+      { "name": "The No-Shadow Rule（无阴影规则）", "body": "不用 box-shadow 表达深度或层级。需要抬起一个元素时，用光晕、模糊或 1px 光边；引入投影等于换掉这套体系的物质观。", "section": "elevation" },
+      { "name": "The 1px Rim Rule（1px 光边规则）", "body": "底色层永远 inset: 1px。这 1px 是静止态下光晕唯一可见的通道；改成 inset: 0 会让光在默认态被完全遮住，组件看起来就是一个纯色按钮。", "section": "elevation" },
+      { "name": "The Inherited Corner Rule（圆角逐层继承规则）", "body": "任何新增的光晕/遮罩层必须 border-radius: inherit，不得写死数值。写死的那一层会在圆角变化时露出矩形角。", "section": "elevation" },
+      { "name": "The Single Radius Entry Rule（圆角单一入口规则）", "body": "改形状只改 --aurora-button-radius。直接去改 .aurora-glow 的 --aurora-radius 会在下一次运行时被引擎覆盖。", "section": "elevation" }
+    ],
+    "dos": [
+      "Do 只用 --aurora-button-radius 这一个入口改形状；光晕会自动跟随。",
+      "Do 让每一层新增的光晕/遮罩 border-radius: inherit。",
+      "Do 保持按钮文字 14px / line-height: 1 / font-weight: 400（The 14px/1 Rule）。",
+      "Do 保持零 box-shadow；需要深度时用模糊、光晕或 1px 光边（The No-Shadow Rule）。",
+      "Do 保持底色层 inset: 1px（The 1px Rim Rule）。",
+      "Do 在任何新增动画上同时处理 prefers-reduced-motion——引擎侧 return + CSS 侧 transition: none。",
+      "Do 让彩度只出现在极光光谱里，界面其余部分保持无彩中性（The One Light Rule）。",
+      "Do 把标签字号压在 12px、颜色压在标签灰，让它让位于标本。"
+    ],
+    "donts": [
+      "Don't 把角度更新塞进 React 渲染；必须 ref + setProperty + requestAnimationFrame。",
+      "Don't 要求安装方修改全局 CSS——@property 注册随组件走，这是分发的硬约束。",
+      "Don't 给组件加 box-shadow 或 1px 描边；当前体系两者都没有。",
+      "Don't 假设 disabled 有内建视觉——现在没有，展示页是手动加 opacity-50 补的。",
+      "Don't 把展示页外壳（白底 + 12px 灰标签 + 居中单列堆叠）当作规范照抄；它是临时脚手架，落地页可以推翻（2026-09-23 用户决定）。",
+      "Don't 引入 webfont 到 registry/ 内的组件单元（The No Webfont Rule）。",
+      "Don't 把 favicon 的紫色系当界面主色——它目前只活在 favicon 里，尚未与组件调色板调和（The Untouched Violet）。",
+      "Don't 假定存在响应式断点——当前一个都没有，窄屏下标本行会溢出而非换行。"
+    ]
+  }
+}

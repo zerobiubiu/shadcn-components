@@ -25,3 +25,8 @@ dist-ssr
 
 # 验证脚本产物（node scripts/shot-demo.mjs 生成，本地保留不进仓库）
 _verify/
+
+# impeccable：设计上下文（PRODUCT.md / DESIGN.md / design.json / live 配置）进仓库，
+# 会话日志与注入记录是本机状态，不进
+.impeccable/live/sessions/
+.impeccable/live/inject-journal.json
