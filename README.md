@@ -41,8 +41,8 @@
 ### 构建与校验
 
 ```bash
-npx shadcn@latest registry validate ./registry.json   # 校验 registry.json 与文件路径
-npx shadcn@latest build                               # 产出 public/r/*.json
+bunx shadcn@latest registry validate ./registry.json  # 校验 registry.json 与文件路径
+bunx shadcn@latest build                              # 产出 public/r/*.json
 ```
 
 `build` 的产物必须提交：GitHub 形式的安装会读取仓库内容，站点形式的安装读取 `public/r/`。
@@ -57,11 +57,11 @@ npx shadcn@latest add zerobiubiu/shadcn-components/aurora-button
 npx shadcn@latest add https://<你的域名>/r/aurora-button.json
 
 # 本地预览构建产物
-npx shadcn@latest build && npx serve public
+bunx shadcn@latest build && bunx serve public
 npx shadcn@latest add http://localhost:3000/r/aurora-button.json
 ```
 
-安装会写入三个文件，并自动装齐 npm 依赖：
+安装会写入三个文件，并自动装齐依赖（用消费方项目自己的包管理器——所以上面三条 `add` 刻意保留 `npx`，与本仓库用 bun 无关）：
 
 ```
 @/components/ui/aurora-button.tsx
@@ -85,14 +85,17 @@ npx shadcn@latest add http://localhost:3000/r/aurora-button.json
 ## 展示线
 
 ```bash
-npm run dev            # 本地开发
-npm run build          # tsc -b && vite build
-npm run preview        # 预览构建产物（同时托管 /r/*.json）
-npm run lint           # oxlint
+bun install            # 安装依赖（锁文件 bun.lock）
+bun run dev            # 本地开发
+bun run build          # tsc -b && vite build
+bun run preview        # 预览构建产物（同时托管 /r/*.json）
+bun run lint           # oxlint
 node scripts/shot-demo.mjs   # 端到端：无头 Chrome 截图 + 13 个按钮的光晕初始化断言
 ```
 
 展示站只做预览，不承载分发逻辑；分发所需的文件全部来自 `registry/` 与 `registry.json`。
+
+包管理统一用 **bun**：`package.json` 的 `packageManager` 字段锁定版本，`bun.lock` 是唯一锁文件（`package-lock.json` 已移除）。唯一保留 `node` 的地方是 `scripts/shot-demo.mjs`——它以 `process.execPath` 拉起 vite，在 node 下语义明确。
 
 ## 组件 API
 
@@ -148,11 +151,11 @@ npx shadcn@latest add zerobiubiu/shadcn-components/aurora-button
 已验证通过的等价链路：
 
 ```bash
-npx shadcn@latest registry validate ./registry.json   # ✔ Registry is valid
-npx shadcn@latest build                               # ✔ 产出 public/r/
+bunx shadcn@latest registry validate ./registry.json  # ✔ Registry is valid
+bunx shadcn@latest build                              # ✔ 产出 public/r/
 
 # 完整安装（本地 HTTP，不依赖 CLI 的外部拓取）
-npx serve public
+bunx serve public
 npx shadcn@latest add http://localhost:3000/r/aurora-button.json
 # → Created 3 files + 3 deps，消费方 tsc --noEmit 通过
 ```
