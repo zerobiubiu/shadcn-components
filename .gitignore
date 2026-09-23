@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# 验证脚本产物（node scripts/shot-demo.mjs 生成，本地保留不进仓库）
+_verify/
