@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+/* 展示站全局样式入口。
+   注意：AuroraButton 自身的样式（含 --aurora-* 变量的 @property 注册）
+   全部内聚在组件单元内，见 registry/aurora-button/aurora-glow.css，
+   由 registry/aurora-button/aurora-button.tsx 直接 import —— 安装方无需改全局 CSS。 */

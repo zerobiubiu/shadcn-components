@@ -1,0 +1,28 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "shadcn-components",
+  "homepage": "https://github.com/zerobiubiu/shadcn-components",
+  "items": [
+    {
+      "name": "aurora-button",
+      "type": "registry:ui",
+      "title": "Aurora Button",
+      "description": "彩虹光晕按钮：光晕朝向鼠标、随指针移动。角度由 ref + CSS 自定义属性 + rAF 直接驱动，不经过 React 渲染。",
+      "dependencies": ["class-variance-authority", "clsx", "tailwind-merge"],
+      "files": [
+        {
+          "path": "registry/aurora-button/aurora-button.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/aurora-button/aurora-glow.css",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/aurora-button/lib/aurora.ts",
+          "type": "registry:lib"
+        }
+      ]
+    }
+  ]
+}

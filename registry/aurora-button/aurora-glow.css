@@ -1,0 +1,140 @@
+/* ============================================================================
+   aurora-glow.css —— Aurora 光晕层精确样式
+   ---------------------------------------------------------------------------
+   数值逐字节取自原站 CSSOM（sheet-33/34-BUTTON），仅类名与 CSS 变量名语义化：
+     类名对照
+       aurora-glow       ← 原 .BznTFe（光晕容器，5 个尺寸变量写在这里）
+       aurora-var-layer  ← 原 .fZhNMe（变量层，两个角度变量写在这里）
+       aurora-blur       ← 原 .eruMcc（模糊层）
+       aurora-blur-inner ← 原 .eOuHwe（内层模糊 blur 1px）
+       aurora-mask       ← 原 .Tdahud（角度遮罩层）
+       aurora-disc       ← 原 .tgPjse（彩虹圆盘）
+     变量对照（原站运行时哈希名 → 本项目语义名，即原站 _.Sg 的注册名）
+       --q9niGe  →  --aurora-mask-angle       --cqcjz   →  --aurora-gradient-angle
+       --BgHDjb  →  --aurora-radius           --bFlrOb  →  --aurora-blur
+       --HM63Tc  →  --aurora-inset            --sjdAce  →  --aurora-scale-x
+       --mWus4b  →  --aurora-scale-y
+   @property 声明在本文件顶部（角度可插值的前提），
+   使本组件不依赖宿主的全局 CSS。
+   ============================================================================ */
+
+/* ── 角度变量注册（角度可插值的前提，原站由 CSS.registerProperty 运行时注册）── */
+@property --aurora-mask-angle {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0deg;
+}
+@property --aurora-gradient-angle {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0deg;
+}
+
+/* ── 光晕容器（原 .BznTFe）──────────────────────────────────────────────
+   CSS 回退值取自原文；运行时由 aurora.ts 写入实际值（100px/4px/-1px/4/1.5，
+   radius 会按宿主按钮的 --aurora-button-radius 自动跟随） */
+.aurora-glow {
+  --aurora-radius: 24px;
+  --aurora-blur: 5px;
+  --aurora-scale-x: 7;
+  --aurora-scale-y: 1.5;
+  --aurora-inset: 0;
+  position: absolute;
+  inset: 0;
+  border-radius: var(--aurora-radius);
+  pointer-events: none;
+  z-index: 0;
+  overflow: visible;
+  will-change: height;
+  transition: height 0.15s;
+}
+
+/* ── 变量层（原 .fZhNMe）：JS 把两个角度变量写在这里 ─────────────────── */
+.aurora-var-layer {
+  --aurora-gradient-angle: 0deg;
+  --aurora-mask-angle: 0deg;
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  opacity: 0;
+  will-change: --aurora-mask-angle, --aurora-gradient-angle, opacity;
+}
+
+/* ── 模糊层（原 .eruMcc）────────────────────────────────────────────── */
+.aurora-blur {
+  inset: var(--aurora-inset, 0);
+  position: absolute;
+  border-radius: inherit;
+  overflow: hidden;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  filter: blur(var(--aurora-blur, 5px));
+}
+.aurora-blur-inner {
+  filter: blur(1px);
+}
+
+/* ── 角度遮罩层（原 .Tdahud）────────────────────────────────────────── */
+.aurora-mask {
+  inset: 0;
+  position: absolute;
+  border-radius: inherit;
+  -webkit-mask-image:
+    conic-gradient(from var(--aurora-mask-angle), transparent 0, transparent 50%, black 68%, black 75%, transparent 89%),
+    conic-gradient(from var(--aurora-mask-angle), black 30%, transparent 50%, black 70%);
+  mask-image:
+    conic-gradient(from var(--aurora-mask-angle), transparent 0, transparent 50%, black 68%, black 75%, transparent 89%),
+    conic-gradient(from var(--aurora-mask-angle), black 30%, transparent 50%, black 70%);
+  scale: var(--aurora-scale-x, 7) var(--aurora-scale-y, 1.5);
+  -webkit-mask-composite: source-in, xor;
+  mask-composite: intersect;
+}
+.aurora-blur-inner .aurora-mask {
+  -webkit-mask-image:
+    conic-gradient(from var(--aurora-mask-angle), transparent 0, transparent 62%, black 82%, transparent 89%),
+    conic-gradient(from var(--aurora-mask-angle), black 30%, transparent 50%, black 70%);
+  mask-image:
+    conic-gradient(from var(--aurora-mask-angle), transparent 0, transparent 62%, black 82%, transparent 89%),
+    conic-gradient(from var(--aurora-mask-angle), black 30%, transparent 50%, black 70%);
+}
+
+/* ── 彩虹圆盘（原 .tgPjse）：15 段色标，逐字节一致 ──────────────────── */
+.aurora-disc {
+  inset: 0;
+  position: absolute;
+  border-radius: 50%;
+  background: conic-gradient(
+    #3186ff 34%, #9378ff 37%, #f96bd6 39%, #fc413d 41%, #fc413d 48%,
+    #ff6b2b 50%, #fec700 52%, #ffdb0f 56%, #88de42 58%, #0ebc5f 61%,
+    #0ebc5f 65%, #2eaab2 70%, #00a9bb 72%, #3186ff 73%, #3186ff 83%,
+    #3186ff 100%
+  );
+  aspect-ratio: 1 / 1;
+  translate: 0 -50%;
+  inset-block-start: 50%;
+  rotate: var(--aurora-gradient-angle);
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+/* hover 底色虚化（原 .plR5qb:not(.PHjFye):hover .bvUkz）——
+   默认态启用；variant=plain / noBlur 时由组件以 blur-none 覆盖 */
+.aurora-surface {
+  transition: filter 0.15s;
+}
+.aurora-button:not(.aurora-plain):hover .aurora-surface {
+  filter: blur(2px);
+}
+
+/* 尊重系统「减弱动态效果」 */
+@media (prefers-reduced-motion: reduce) {
+  .aurora-glow {
+    transition: none;
+  }
+  .aurora-surface {
+    transition: none;
+  }
+  .aurora-button:not(.aurora-plain):hover .aurora-surface {
+    filter: none;
+  }
+}
