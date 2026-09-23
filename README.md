@@ -121,17 +121,41 @@ import { AuroraButton } from "@/components/ui/aurora-button"
 - `registry/aurora-button/lib/aurora.ts`（函数、类、实例字段、方法、CSS 变量）
 - `registry/aurora-button/aurora-glow.css`（类名、CSS 变量）
 
-## 已知环境限制
+## 发布状态
 
-- 仓库已推送：<https://github.com/zerobiubiu/shadcn-components>
-- GitHub 形式的安装（`add zerobiubiu/shadcn-components/aurora-button`）与
-  `registry validate zerobiubiu/shadcn-components` 需仓库保持**公开**。
-- 本机 Node 的 `fetch` 直连 `ui.shadcn.com` 会失败（`add` 需要它拉取 baseColor；
-  官方 registry 的 `button` 以完全相同的方式失败，与本仓库无关）。
-  临时绕过：把默认 registry 指向本地镜像后加 `REGISTRY_URL`（CLI 内置开关）：
+仓库：<https://github.com/zerobiubiu/shadcn-components>（PUBLIC，MIT）
 
-  ```bash
-  REGISTRY_URL=http://127.0.0.1:8792/r npx shadcn@latest add http://127.0.0.1:8792/r/aurora-button.json
-  ```
+```bash
+# GitHub 形式
+npx shadcn@latest add zerobiubiu/shadcn-components/aurora-button
+```
 
-  `registry validate`、`build`、`view` 不受影响。
+## 本机网络环境限制
+
+本机的 shadcn CLI 自身 HTTP 拓取会失败（`ui.shadcn.com` 与 `raw.githubusercontent.com`
+均报 “other side closed” / “could not fetch”）。已用对照实验判定为本地环境问题：
+
+| 对照组 | 结果 |
+| --- | --- |
+| 官方 registry 的 `button` | 以完全相同方式失败 → 与本仓库无关 |
+| `node -e fetch(...)` 直连 raw.githubusercontent.com | 200（隐藏代理变量时） |
+| `nu http get` 同一 URL | 正常返回 |
+| shadcn CLI 拓取同一 URL | 失败 |
+
+因此 `add` / `registry validate <owner>/<repo>` 这两种需要 CLI 自行联网的形式在本机跑不通；
+与本仓库内容和结构无关（已另行验证，见下）。
+
+已验证通过的等价链路：
+
+```bash
+npx shadcn@latest registry validate ./registry.json   # ✔ Registry is valid
+npx shadcn@latest build                               # ✔ 产出 public/r/
+
+# 完整安装（本地 HTTP，不依赖 CLI 的外部拓取）
+npx serve public
+npx shadcn@latest add http://localhost:3000/r/aurora-button.json
+# → Created 3 files + 3 deps，消费方 tsc --noEmit 通过
+```
+
+已发布内容的核验（绕过 CLI 的 HTTP 层，直读 raw）：`registry.json` 的 `name`、`homepage`
+正确，1 个 item，3 个 `files[].path` 均在已发布文件树中真实存在。
